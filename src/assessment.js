@@ -127,17 +127,10 @@ function Burrito(){
 // # Prototype 1
 // Add prototype function to the array type that doubles the value of every item in the array\
 Array.prototype.doubler = function(){
-  var o = {}, i, l = this.length, r = [];
-  for(i = 0; i<l; i++){
-    o[this[i]] = this[i];
+  for(var i = 0; i < this.length; i++){
+    this[i] *= 2;
   }
-  for(i in o){
-    r.push(o[i]);
-  }
-  for(var i = 0; i < r.length; i++){
-    r[i] *= 2;
-  }
-  return r;
+  return this;
 }
 
 
